@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>FOREVER 21 | Official Online Store</title>
+  <meta name="description" content="Shop the latest fashion trends at Forever 21. Discover clothing, shoes, and accessories for women, men, and teens at unbeatable value.">
+  
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons Script (Local + CDN fallback) -->
+  <script src="lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Matching Image 2) -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span class="announcement-item">Extra 30% off in cart. <a href="#just-in" class="announcement-link">Shop now</a></span>
+      <span class="announcement-sep dot-yellow">•</span>
+      <span class="announcement-item">Free shipping on orders $50+</span>
+      <span class="announcement-sep dot-yellow">•</span>
+      <span class="announcement-item">BLACK FRIDAY WARM UP - 40% Off</span>
+      <span class="announcement-sep dot-yellow">•</span>
+      <span class="announcement-item">Earn 15% by Sign up and stay in the loop</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Matching Image 2) -->
+  <header class="site-header">
+    <div class="header-main">
+      <div class="header-inner container">
+        
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-btn" id="menu-toggle-btn" aria-label="Open mobile navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <!-- Brand Logo on Left -->
+        <a href="#" class="brand-logo-link" aria-label="Forever 21 Home">
+          <img src="images/f21_logo.svg" alt="FOREVER 21" class="brand-logo-img">
+        </a>
+
+        <!-- Right Side Group: Search Box + Account + Cart -->
+        <div class="header-right-group">
+          <!-- Desktop Search Bar (Positioned on the right side before login) -->
+          <div class="search-container desktop-search">
+            <div class="search-box">
+              <img src="images/icons/search.svg" alt="Search" class="search-icon-img">
+              <input 
+                type="text" 
+                id="desktop-search-input" 
+                class="search-input" 
+                placeholder="Search tops, Bottoms, shorts..." 
+                autocomplete="off"
+              >
+              <button class="search-clear-btn" id="desktop-search-clear" aria-label="Clear search" style="display: none;">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+            <!-- Live Search Results Dropdown -->
+            <div class="search-dropdown" id="desktop-search-dropdown" style="display: none;"></div>
+          </div>
+
+          <!-- Header Actions: Account & Cart (Using SVG icons from images/icons/) -->
+          <div class="header-actions">
+            <!-- Mobile Search Trigger Icon -->
+            <button class="action-btn mobile-search-trigger mobile-only" id="mobile-search-trigger" aria-label="Focus search">
+              <img src="images/icons/search.svg" alt="Search" class="search-icon-img">
+            </button>
+
+            <!-- Desktop Account Button: Login / Signup -->
+            <button class="action-btn account-btn desktop-only" id="account-btn" aria-label="Login or Signup">
+              <img src="images/icons/user.svg" alt="User" class="user-icon-img">
+              <span class="action-label">Login / Signup</span>
+            </button>
+            
+            <!-- Shopping Cart Button: My Cart with SVG cart icon -->
+            <button class="action-btn cart-btn" id="cart-toggle-btn" aria-label="View Shopping Cart">
+              <div class="cart-icon-wrap">
+                <img src="images/icons/cart.svg" alt="Cart" class="cart-icon-img">
+                <span class="cart-badge" id="cart-badge-count">0</span>
+              </div>
+              <span class="action-label desktop-only">My Cart</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Search Bar -->
+    <div class="mobile-search-bar">
+      <div class="container">
+        <div class="search-box">
+          <img src="images/icons/search.svg" alt="Search" class="search-icon-img">
+          <input 
+            type="text" 
+            id="mobile-search-input" 
+            class="search-input" 
+            placeholder="Search tops, Bottoms, shorts..." 
+            autocomplete="off"
+          >
+          <button class="search-clear-btn" id="mobile-search-clear" aria-label="Clear search" style="display: none;">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="search-dropdown" id="mobile-search-dropdown" style="display: none;"></div>
+      </div>
+    </div>
+
+    <!-- Secondary Category Navigation (Desktop: using images/icons/Dropdown.svg, clearance removed) -->
+    <nav class="category-nav desktop-only" aria-label="Category navigation">
+      <div class="container">
+        <ul class="category-list">
+          <li><a href="#trending" class="nav-link">NEW ARRIVALS</a></li>
+          <li class="has-dropdown">
+            <a href="#just-in" class="nav-link">
+              <span>WOMEN</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#just-in" class="nav-link">
+              <span>MEN</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#categories" class="nav-link">
+              <span>CURVE</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#categories" class="nav-link">
+              <span>KIDS</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#categories" class="nav-link">
+              <span>BABY</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#categories" class="nav-link">
+              <span>SHOES</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#categories" class="nav-link">
+              <span>ACCESSORIES</span>
+              <img src="images/icons/Dropdown.svg" alt="" class="menu-dropdown-img">
+            </a>
+          </li>
+          <li>
+            <a href="#markdown" class="nav-link nav-sale">
+              <span>SALE</span>
+              <span class="sale-dot"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- Desktop Hero Layout (Robust across all resolutions: 1024px, 1400px, 1600px, 1920px+) -->
+      <div class="hero-desktop-wrapper desktop-only">
+        <div class="hero-desktop-bg" style="background-image: url('images/desktop_hero_banner.svg');"></div>
+        <div class="hero-desktop-container container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Wear Your Style.<br>
+              Own Your Moment.
+            </h1>
+            <p class="hero-description">
+              Discover the latest trends, effortless essentials, and statement-making styles. From everyday casuals to standout looks, find everything you need to express your individuality.
+            </p>
+            <a href="#just-in" class="hero-cta-btn">
+              <span>SHOP THE LATEST</span>
+              <i data-lucide="arrow-up-right" class="btn-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Hero Layout (Hero Image First, Content Below) -->
+      <div class="hero-mobile-wrapper mobile-only">
+        <div class="hero-mobile-media">
+          <img 
+            src="images/mobile hero image.png" 
+            alt="Forever 21 Style" 
+            class="hero-mobile-img"
+          >
+        </div>
+        <div class="hero-mobile-content">
+          <h1 class="hero-title">
+            Wear Your Style.<br>
+            Own Your Moment.
+          </h1>
+          <p class="hero-description">
+            Discover the latest trends, effortless essentials, and statement-making styles. From everyday casuals to standout looks, find everything you need to express your individuality.
+          </p>
+          <a href="#just-in" class="hero-cta-btn">
+            <span>SHOP THE LATEST</span>
+            <i data-lucide="arrow-up-right" class="btn-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDING COLLECTIONS SECTION -->
+    <section class="trending-section" id="trending">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Trending Collections</h2>
+        </div>
+
+        <div class="trending-grid">
+          <!-- Card 1: Going Out? -->
+          <article class="trending-card" data-category="going-out">
+            <div class="card-media">
+              <img 
+                src="images/Neon Café Night Stroll.png" 
+                alt="Going Out? Night-out fits" 
+                loading="lazy"
+                class="card-img"
+              >
+            </div>
+            <div class="card-caption">
+              <h3 class="card-heading">Going Out?</h3>
+              <p class="card-subheading">Night-out fits</p>
+            </div>
+          </article>
+
+          <!-- Card 2: Sets -->
+          <article class="trending-card" data-category="sets">
+            <div class="card-media">
+              <img 
+                src="images/Coordinated Botanical Resort Couple.png" 
+                alt="Sets Matching, done for you" 
+                loading="lazy"
+                class="card-img"
+              >
+            </div>
+            <div class="card-caption">
+              <h3 class="card-heading">Sets</h3>
+              <p class="card-subheading">Matching, done for you</p>
+            </div>
+          </article>
+
+          <!-- Card 3: Game day -->
+          <article class="trending-card" data-category="game-day">
+            <div class="card-media">
+              <img 
+                src="images/Stylish Back-to-Back Streetwear Duo.png" 
+                alt="Game day Stand-out stadium style" 
+                loading="lazy"
+                class="card-img"
+              >
+            </div>
+            <div class="card-caption">
+              <h3 class="card-heading">Game day</h3>
+              <p class="card-subheading">Stand-out stadium style</p>
+            </div>
+          </article>
+
+          <!-- Card 4: Festival -->
+          <article class="trending-card" data-category="festival">
+            <div class="card-media">
+              <img 
+                src="images/Festive Diya Glow Couple Portrait.png" 
+                alt="Festival Pack the wow weekend" 
+                loading="lazy"
+                class="card-img"
+              >
+            </div>
+            <div class="card-caption">
+              <h3 class="card-heading">Festival</h3>
+              <p class="card-subheading">Pack the wow weekend</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY (4 BANNERS) -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="categories-grid">
+          <!-- Category 1: Men Wear -->
+          <div class="category-card" data-category="men-wear">
+            <div class="category-media">
+              <img 
+                src="images/Summer Streetwear Portrait.png" 
+                alt="Men Wear" 
+                loading="lazy"
+                class="category-img"
+              >
+              <div class="category-badge">Men Wear</div>
+            </div>
+          </div>
+
+          <!-- Category 2: Female Wear -->
+          <div class="category-card" data-category="female-wear">
+            <div class="category-media">
+              <img 
+                src="images/Sunlit Urban Chic on Concrete Steps.png" 
+                alt="Female Wear" 
+                loading="lazy"
+                class="category-img"
+              >
+              <div class="category-badge">Female Wear</div>
+            </div>
+          </div>
+
+          <!-- Category 3: Teen Wear -->
+          <div class="category-card" data-category="teen-wear">
+            <div class="category-media">
+              <img 
+                src="images/Urban Duo in Denim and Maroon.png" 
+                alt="Teen Wear" 
+                loading="lazy"
+                class="category-img"
+              >
+              <div class="category-badge">Teen Wear</div>
+            </div>
+          </div>
+
+          <!-- Category 4: Trend Wear -->
+          <div class="category-card" data-category="trend-wear">
+            <div class="category-media">
+              <img 
+                src="images/Trendy Accessories in Warm Sunlight.png" 
+                alt="Trend Wear" 
+                loading="lazy"
+                class="category-img"
+              >
+              <div class="category-badge">Trend Wear</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JUST IN SECTION -->
+    <section class="just-in-section" id="just-in">
+      <div class="container">
+        <!-- Section Header with Filters and View All -->
+        <div class="just-in-header">
+          <div class="just-in-info">
+            <h2 class="just-in-title">Just in</h2>
+            <p class="just-in-subtitle">Extra 20% off in cart on everything below</p>
+            <div class="filter-tab-group" role="tablist">
+              <button 
+                class="filter-pill active" 
+                role="tab" 
+                aria-selected="true" 
+                data-filter="women"
+              >Women</button>
+              <button 
+                class="filter-pill" 
+                role="tab" 
+                aria-selected="false" 
+                data-filter="men"
+              >Men</button>
+            </div>
+          </div>
+
+          <div class="just-in-action">
+            <a href="#just-in" class="view-all-link">
+              <span>View All</span>
+              <i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Products Carousel / Grid -->
+        <div class="products-wrapper">
+          <div class="products-grid" id="products-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card" data-id="prod-1" data-gender="women">
+              <div class="product-media" onclick="openQuickView('prod-1')">
+                <img 
+                  src="images/Burgundy Sweater Editorial Portrait.png" 
+                  alt="Mockneck Ribon Fitted sweater" 
+                  loading="lazy"
+                  class="product-img"
+                >
+                <div class="quick-view-overlay">
+                  <span>Quick View</span>
+                </div>
+              </div>
+              <div class="product-details">
+                <h3 class="product-title" onclick="openQuickView('prod-1')">Mockneck Ribon Fitted sweater</h3>
+                <div class="product-price">$29.44</div>
+              </div>
+              <button 
+                class="add-to-cart-action-btn" 
+                data-product-id="prod-1"
+                data-name="Mockneck Ribon Fitted sweater"
+                data-price="29.44"
+                data-image="images/Burgundy Sweater Editorial Portrait.png"
+              >
+                <span>Add to cart</span>
+                <i data-lucide="shopping-bag" class="btn-cart-icon"></i>
+              </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-id="prod-2" data-gender="women">
+              <div class="product-media" onclick="openQuickView('prod-2')">
+                <img 
+                  src="images/Smiling Woman in “I’m Late” Tee.png" 
+                  alt="Not Boring Graphic Baby tee Dress" 
+                  loading="lazy"
+                  class="product-img"
+                >
+                <div class="quick-view-overlay">
+                  <span>Quick View</span>
+                </div>
+              </div>
+              <div class="product-details">
+                <h3 class="product-title" onclick="openQuickView('prod-2')">Not Boring Graphic Baby tee Dress</h3>
+                <div class="product-price">$19.44</div>
+              </div>
+              <button 
+                class="add-to-cart-action-btn" 
+                data-product-id="prod-2"
+                data-name="Not Boring Graphic Baby tee Dress"
+                data-price="19.44"
+                data-image="images/Smiling Woman in “I’m Late” Tee.png"
+              >
+                <span>Add to cart</span>
+                <i data-lucide="shopping-bag" class="btn-cart-icon"></i>
+              </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-id="prod-3" data-gender="women">
+              <div class="product-media" onclick="openQuickView('prod-3')">
+                <img 
+                  src="images/Late Again_ Sleeping Cat Streetwear.png" 
+                  alt="I'm late Graphic baby tee dress" 
+                  loading="lazy"
+                  class="product-img"
+                >
+                <div class="quick-view-overlay">
+                  <span>Quick View</span>
+                </div>
+              </div>
+              <div class="product-details">
+                <h3 class="product-title" onclick="openQuickView('prod-3')">I'm late Graphic baby tee dress</h3>
+                <div class="product-price">$9.44</div>
+              </div>
+              <button 
+                class="add-to-cart-action-btn" 
+                data-product-id="prod-3"
+                data-name="I'm late Graphic baby tee dress"
+                data-price="9.44"
+                data-image="images/Late Again_ Sleeping Cat Streetwear.png"
+              >
+                <span>Add to cart</span>
+                <i data-lucide="shopping-bag" class="btn-cart-icon"></i>
+              </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-id="prod-4" data-gender="women">
+              <div class="product-media" onclick="openQuickView('prod-4')">
+                <img 
+                  src="images/Burgundy Turtleneck Fashion Portrait.png" 
+                  alt="Ribed turtleneck mini sweater-dress" 
+                  loading="lazy"
+                  class="product-img"
+                >
+                <div class="quick-view-overlay">
+                  <span>Quick View</span>
+                </div>
+              </div>
+              <div class="product-details">
+                <h3 class="product-title" onclick="openQuickView('prod-4')">Ribed turtleneck mini sweater-dress</h3>
+                <div class="product-price">$39.44</div>
+              </div>
+              <button 
+                class="add-to-cart-action-btn" 
+                data-product-id="prod-4"
+                data-name="Ribed turtleneck mini sweater-dress"
+                data-price="39.44"
+                data-image="images/Burgundy Turtleneck Fashion Portrait.png"
+              >
+                <span>Add to cart</span>
+                <i data-lucide="shopping-bag" class="btn-cart-icon"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW MARKDOWN PROMO BANNER -->
+    <section class="markdown-section" id="markdown">
+      <div class="container markdown-container">
+        <div class="markdown-header-text">
+          <h2 class="markdown-title">New Markdown<br>Added - Up to 80% off</h2>
+          <p class="markdown-subtitle">Sale prices then more off at checkout</p>
+        </div>
+
+        <div class="markdown-pills-row">
+          <button class="promo-pill pill-dark active">Shop all Sale</button>
+          <button class="promo-pill pill-light">Women's</button>
+          <button class="promo-pill pill-light">Teen's</button>
+          <button class="promo-pill pill-light">Men</button>
+          <button class="promo-pill pill-light">Kids</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Footer Main Columns -->
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-wrap">
+            <img src="images/f21_logo.svg" alt="FOREVER 21" class="footer-brand-logo">
+          </div>
+          <p class="footer-bio">
+            A 21-year-old high fashion brand and an omnichannel powerhouse on mission through fast-track fashion at unbeatable value.
+          </p>
+          <p class="footer-tagline">
+            Fashion is for everyone.
+          </p>
+        </div>
+
+        <!-- Column 2: Help -->
+        <div class="footer-col accordion-col" id="footer-help-col">
+          <button class="accordion-header" aria-expanded="false">
+            <h3 class="footer-heading">Help</h3>
+            <i data-lucide="chevron-down" class="accordion-arrow mobile-only"></i>
+          </button>
+          <ul class="footer-links">
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Return center</a></li>
+            <li><a href="#">Track my order</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Size guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Info -->
+        <div class="footer-col accordion-col" id="footer-info-col">
+          <button class="accordion-header" aria-expanded="false">
+            <h3 class="footer-heading">Info</h3>
+            <i data-lucide="chevron-down" class="accordion-arrow mobile-only"></i>
+          </button>
+          <ul class="footer-links">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping policy</a></li>
+            <li><a href="#">Return policy</a></li>
+            <li><a href="#">Special offers</a></li>
+            <li><a href="#">Product recalls</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: App & Social -->
+        <div class="footer-col apps-social-col">
+          <!-- Get the App -->
+          <div class="get-app-block">
+            <h3 class="footer-heading">Get the app</h3>
+            <div class="app-store-badges">
+              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="app-link" aria-label="Get it on Google Play">
+                <img src="images/apps/play store.png" alt="Google Play Store" class="app-badge-img">
+              </a>
+              <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="app-link" aria-label="Download on the App Store">
+                <img src="images/apps/app store.png" alt="Apple App Store" class="app-badge-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Follow Social Media -->
+          <div class="follow-block">
+            <h3 class="footer-heading">Follow</h3>
+            <div class="social-icon-row">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <img src="images/social/facebook.png" alt="Facebook" class="social-icon-img">
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <img src="images/social/instagram.png" alt="Instagram" class="social-icon-img">
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (formerly Twitter)">
+                <img src="images/social/X.png" alt="X" class="social-icon-img">
+              </a>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pinterest">
+                <img src="images/social/pinterest.png" alt="Pinterest" class="social-icon-img">
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                <img src="images/social/tiktok.png" alt="TikTok" class="social-icon-img">
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <img src="images/social/youtube.png" alt="YouTube" class="social-icon-img">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="payment-methods-text">
+          Visa &bull; Mastercard &bull; American Express &bull; Discover &bull; PayPal &bull; Apple Pay &bull; Google Pay &bull; Shop Pay
+        </p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & DRAWERS ================= -->
+
+  <!-- SHOPPING CART SLIDE-OVER DRAWER -->
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-wrap">
+        <img src="images/icons/cart.svg" alt="Cart" class="cart-icon-img">
+        <h2 id="cart-title">My Cart (<span id="drawer-cart-count">0</span>)</h2>
+      </div>
+      <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close cart drawer">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Indicator -->
+    <div class="shipping-progress-banner">
+      <div class="shipping-progress-text" id="shipping-progress-text">Add $50.00 more for <strong>FREE SHIPPING!</strong></div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-drawer-body" id="cart-items-container">
+      <!-- Items dynamically populated via JavaScript -->
+    </div>
+
+    <!-- Cart Footer / Summary -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="price-val" id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-line discount-line">
+        <span>Extra 20% Off (F21APP)</span>
+        <span class="price-val discount-val" id="cart-discount">-$0.00</span>
+      </div>
+      <div class="cart-summary-line total-line">
+        <span>Estimated Total</span>
+        <span class="price-val total-val" id="cart-total">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">
+        <span>PROCEED TO CHECKOUT</span>
+        <i data-lucide="arrow-right"></i>
+      </button>
+      <button class="continue-shopping-btn" id="continue-shopping-btn">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true">
+    <div class="mobile-nav-header">
+      <img src="images/f21_logo.svg" alt="FOREVER 21" class="mobile-nav-logo">
+      <button class="drawer-close-btn" id="close-mobile-nav-btn" aria-label="Close navigation menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    
+    <div class="mobile-nav-body">
+      <div class="mobile-user-actions">
+        <button class="mobile-auth-btn" id="mobile-auth-btn">
+          <img src="images/icons/user.svg" alt="User" class="user-icon-img">
+          <span>Login / Signup</span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#trending" class="mobile-link">NEW ARRIVALS</a>
+        <a href="#just-in" class="mobile-link">WOMEN</a>
+        <a href="#just-in" class="mobile-link">MEN</a>
+        <a href="#categories" class="mobile-link">CURVE</a>
+        <a href="#categories" class="mobile-link">KIDS</a>
+        <a href="#categories" class="mobile-link">BABY</a>
+        <a href="#categories" class="mobile-link">SHOES</a>
+        <a href="#categories" class="mobile-link">ACCESSORIES</a>
+        <a href="#markdown" class="mobile-link mobile-sale">SALE <span class="sale-badge">UP TO 80%</span></a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <div class="mobile-support-links">
+          <a href="#">Order Tracking</a>
+          <a href="#">Return Center</a>
+          <a href="#">Help & FAQs</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW PRODUCT MODAL -->
+  <div class="modal-backdrop" id="quick-view-backdrop">
+    <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="close-quick-view-btn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="quick-view-content" id="quick-view-content">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHENTICATION (SIGN IN / REGISTER) MODAL -->
+  <div class="modal-backdrop" id="auth-modal-backdrop">
+    <div class="auth-modal" id="auth-modal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="close-auth-modal-btn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="auth-modal-header">
+        <img src="images/f21_logo.svg" alt="FOREVER 21" class="auth-logo">
+        <h2 id="auth-heading">Welcome to Forever 21</h2>
+        <p>Sign in to your account for exclusive rewards &amp; fast checkout.</p>
+      </div>
+      <form class="auth-form" id="auth-form" onsubmit="event.preventDefault(); handleAuthSubmit();">
+        <div class="form-group">
+          <label for="auth-email">Email Address</label>
+          <input type="email" id="auth-email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="auth-password">Password</label>
+          <input type="password" id="auth-password" required placeholder="Enter your password">
+        </div>
+        <div class="form-row-between">
+          <label class="remember-label">
+            <input type="checkbox" checked> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <button type="submit" class="auth-submit-btn">SIGN IN</button>
+        <div class="auth-divider"><span>OR</span></div>
+        <button type="button" class="auth-guest-btn" onclick="closeAuthModal()">CONTINUE AS GUEST</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
